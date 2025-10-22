@@ -1,15 +1,17 @@
 package Pokemon;
 import java.util.Random;
 
-public class Pokemon0 {
+public abstract class Pokemon1 {
 	private String nom;
 	private int niveau;
 	private float hp;
 	private float atk;
-	private static int niveauMax;
-	Random r = new Random();
+	private static int niveauMax; 
+	private TypePokemon type;
+	private static Random r = new Random();
 	
-	public Pokemon0(String nom) {
+	
+	public Pokemon1(String nom) {
 		this.nom = nom;
 		this.niveau = r.nextInt(1, 10);
 		this.hp = this.niveau*2;
@@ -45,9 +47,10 @@ public class Pokemon0 {
 		this.hp = this.niveau * 2;
 	}
 	
-	public void attaquer(Pokemon0 p) {
-		p.hp-=this.atk;
-	}
+	public abstract void attaquer(Pokemon1 p);
+	
+	public abstract void subir(Pokemon1 P);
+	
 	
 	@Override
 	public String toString() {

@@ -4,8 +4,8 @@ import java.util.Random;
 public class Pokemon0 {
 	private String nom;
 	private int niveau;
-	private float hp;
-	private float atk;
+	private int hp;
+	private int atk;
 	private static int niveauMax;
 	Random r = new Random();
 	
@@ -24,11 +24,11 @@ public class Pokemon0 {
 		return this.niveau;
 	}
 	
-	public float getHp() {
+	public int getHp() {
 		return this.hp;
 	}
 	
-	public float getAtk() {
+	public int getAtk() {
 		return this.atk;
 	}
 	

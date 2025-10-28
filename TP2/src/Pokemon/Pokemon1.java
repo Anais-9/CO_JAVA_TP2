@@ -64,9 +64,14 @@ public abstract class Pokemon1 {
 		return msg;
 	}
 	
+	private String prefixe() {
+		String message= "[Pokemon "+this.nom+"] :" ;
+		return message;
+	}
+	
 	public void log(String msg) {
-		String message= "[Pokemon "+this.nom+"] :" +msg;
-		System.out.println(message);
+		String message = this.prefixe();
+		System.out.println(message+msg);
 	}
 
 }
